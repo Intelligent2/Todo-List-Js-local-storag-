@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.addTask {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.addTask input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    max-width: 80%;
+    min-width: 0;
+}
+
+.addTask .buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.addTask button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 48%;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+h3 {
+    color: #333;
+}
+
+ol li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ol li span {
+    flex: 1;
+    max-width: calc(100% - 100px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+ol li .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+ol li button {
+    padding: 7px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.Completed li {
+    background-color: #ecf0f1; /* Исправлено значение цвета */
+    border-color: #95a5a6;
+}
+
+.Completed li button {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+/* Измененный цвет при выполненной задаче */
+.Completed li {
+    background-color: green; /* Исправлено значение цвета */
+    border-color: #c3e6cb;
+}
+
+.Completed li button {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+@media screen and (max-width: 768px) {
+    .addTask input {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .addTask .buttons,
+    ol li .buttons,
+    .Completed li .buttons {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .addTask button,
+    ol li button,
+    .Completed li button {
+        max-width: 100%;
+        margin-right: 0;
+        width: 100%;
+    }
+}
